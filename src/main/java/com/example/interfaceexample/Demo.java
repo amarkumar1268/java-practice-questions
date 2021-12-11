@@ -12,5 +12,8 @@ public interface Demo {
 	{
 		System.out.println("hello D");
 	}
+	static void demo(){
+
+	}
 		
 }

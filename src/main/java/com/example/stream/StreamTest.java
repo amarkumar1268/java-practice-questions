@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.Map;
+import java.util.HashMap;
 
 public class StreamTest {
 
@@ -82,6 +83,16 @@ public class StreamTest {
       //parallel processing
       count = strings.parallelStream().filter(string -> string.isEmpty()).count();
       System.out.println("Empty Strings: " + count);
+
+
+      Map<String, Integer> items = new HashMap<String,Integer>();
+      items.put("coins", 5);
+      items.put("pens", 2);
+      items.put("chairs", 7);
+
+      items.entrySet().stream().forEach(e -> {
+         System.out.format("key: %s, value: %d%n", e.getKey(), e.getValue());
+      });
    }
 	
    private static int getCountEmptyStringUsingJava7(List<String> strings) {
