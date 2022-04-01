@@ -1,9 +1,12 @@
 package com.example.lamda.unit3;
 
-import java.util.Arrays;
-import java.util.List;
+import com.example.lamda.common.Person;
 
-import io.javabrains.common.Person;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 
 public class CollectionIterationExample {
 
@@ -30,8 +33,18 @@ public class CollectionIterationExample {
 		System.out.println("Using lambda for each loop");
 		people.forEach(System.out::println);
 		
-		
+		Map<String,Integer> map= new HashMap<String,Integer>();
+		map.put("am1",1);
+		map.put("am2",2);
+		map.put("am3",3);
 
+		map.entrySet().forEach(System.out::println);
+
+		map.forEach((k,v) -> System.out.println("key "+k+" val "+v));
+		map.forEach((k,v) -> System.out.println("key "+k+" val "+v));
+
+		for(Map.Entry<String,Integer> entry: map.entrySet()){
+             System.out.println(entry);
+		}
 	}
-
 }

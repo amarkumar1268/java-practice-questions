@@ -1,10 +1,11 @@
 package com.example.lamda.unit1;
 
+import com.example.lamda.common.Person;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import io.javabrains.common.Person;
 
 public class Unit1ExerciseSolutionJava8 {
 

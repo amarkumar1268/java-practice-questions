@@ -1,10 +1,11 @@
 package com.example.lamda.unit3;
 
+import com.example.lamda.common.Person;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
-import io.javabrains.common.Person;
 
 public class StreamsExample1 {
 

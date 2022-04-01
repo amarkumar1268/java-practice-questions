@@ -19,10 +19,11 @@ public class BlockingQueue {
 	    while(this.queue.size() == this.limit) {
 	      wait();
 	    }
-	    this.queue.add(item);
-	    if(this.queue.size() == 1) {
+	    if(this.queue.size() == 0) {
 	      notifyAll();
 	    }
+
+	    this.queue.add(item);
 	  }
 
 

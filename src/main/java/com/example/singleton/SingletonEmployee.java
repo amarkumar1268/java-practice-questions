@@ -61,7 +61,4 @@ public class  SingletonEmployee implements Cloneable, Serializable {
 	public String toString() {
 		return "SingletonEmployee [name=" + name + ", age=" + age + ", empid=" + empid + ", addr=" + addr.getHno() + ", town="+addr.getTown()+", pincode="+addr.getPincode()+"]";
 	}
-
-	
-	
 }

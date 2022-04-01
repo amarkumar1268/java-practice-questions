@@ -15,10 +15,14 @@ public class StreamTest {
 		
       // Count empty strings
       List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl");
-      System.out.println("List: " +strings);
-      long count = getCountEmptyStringUsingJava7(strings);
+     // System.out.println("List: " +strings);
+      //long count = getCountEmptyStringUsingJava7(strings);
+
+      strings.stream().sorted().forEach((x)-> System.out.println(x));
+
+
 		
-      System.out.println("Empty Strings: " + count);
+    /*  System.out.println("Empty Strings: " + count);
       count = getCountLength3UsingJava7(strings);
 		
       System.out.println("Strings of length 3: " + count);
@@ -61,6 +65,8 @@ public class StreamTest {
       System.out.println("Strings of length 3: " + count);
 		
       filtered = strings.stream().filter(string ->!string.isEmpty()).collect(Collectors.toList());
+
+
       System.out.println("Filtered List: " + filtered);
 		
       mergedString = strings.stream().filter(string ->!string.isEmpty()).collect(Collectors.joining(", "));
@@ -93,6 +99,8 @@ public class StreamTest {
       items.entrySet().stream().forEach(e -> {
          System.out.format("key: %s, value: %d%n", e.getKey(), e.getValue());
       });
+*/
+
    }
 	
    private static int getCountEmptyStringUsingJava7(List<String> strings) {

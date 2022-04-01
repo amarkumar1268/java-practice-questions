@@ -35,12 +35,14 @@ public class EmployeeComparable implements Comparable<EmployeeComparable> {
 	 */
 	public int compareTo(EmployeeComparable emp1) {
 		// TODO Auto-generated method stub
-		if(this.name.equalsIgnoreCase(emp1.name))
+		/*if(this.name.equalsIgnoreCase(emp1.name))
 			return 0;
 		if(this.name.compareToIgnoreCase(emp1.name) > 0)
 			return 1;
 		else
-			return -1;
+			return -1;*/
+
+		return this.name.compareTo(emp1.name);
 	}
 	
 	public String toString()
@@ -69,10 +71,23 @@ public class EmployeeComparable implements Comparable<EmployeeComparable> {
 		
 		System.out.println("list before sorting");
 		al.forEach((n) -> System.out.println(n));
-		
+
 		Collections.sort(al);
 		System.out.println("list after sorting");
 		al.forEach((n) -> System.out.println(n));
+
+
+		ArrayList<Integer> al1=new ArrayList<Integer>();
+		al1.add(1);
+		al1.add(2);
+		al1.add(11);
+		al1.add(3);
+		al1.add(13);
+		al1.add(4);
+
+		Collections.sort(al1);
+		System.out.println("list after sorting");
+		al1.forEach((n) -> System.out.println(n));
 
 	}
 }
